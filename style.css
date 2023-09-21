@@ -11,7 +11,6 @@
     margin-top: -32px;
     padding: 0 50px;
     height: 80px;
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,6 +51,7 @@
     padding: 50px 0;
     gap: 50px;
     border-bottom-right-radius: 500px;
+color:white;
 }
 
 .container-text {
@@ -330,6 +330,21 @@
     height: 100vh;
 }
 
+.skill-right p {
+    width: 40vw;
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+
+}
+
+.skill-right span {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: rgb(140, 98, 176);
+    transition: font-size 1s;
+}
+
 .skill-logos {
     height: 50vh;
     width: 30vw;
@@ -354,6 +369,11 @@
     height: 110px;
 }
 
+.skill-right span:hover {
+    cursor: pointer;
+    font-size: 3rem;
+}
+
 /* contact me section */
 
 .contact {
@@ -361,6 +381,6 @@
     background-color: rgb(126, 72, 173);
 }
 
-.contact a img{
+.contact a img {
     height: 50px;
 }
