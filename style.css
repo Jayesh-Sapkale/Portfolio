@@ -271,6 +271,7 @@ html {
 
 .work-box-top img {
     height: 80px;
+    transition: height 1s, border-radius 1s;
 }
 
 .work-box-text p {
@@ -301,8 +302,14 @@ html {
 
 .work-box-text span:hover {
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
 
+}
+
+.work-box-top img:hover{
+    cursor: pointer;
+    height: 78px;
+    border-radius: 20px;
 }
 
 
@@ -380,13 +387,70 @@ html {
     font-size: 3rem;
 }
 
-/* contact me section */
 
-.contact {
-    height: 50vh;
-    background-color: rgb(126, 72, 173);
+/* certificate container */
+
+.certificate-container {
+    height: 150vh;
+    background-color: rgb(40, 22, 56);
+    border-top-right-radius: 300px;
+    padding: 20px;
 }
 
-.contact a img {
-    height: 50px;
+/* certificate container top section */
+
+
+.certificate-top {
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.certificate-top p {
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.certificate-top span {
+    font-size: 3.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(140, 98, 176);
+    transition: font-size 1s;
+}
+
+
+/* certificate container bottom section */
+
+.certificate-bottom {
+    height: 50vh;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 20px;
+}
+
+.certificate-box img {
+    height: 60vh;
+    width: 40vw;
+    transition: height 1s, width 1s;
+}
+
+/* certificate container animations */
+
+.certificate-top span:hover {
+    font-size: 3rem;
+}
+
+.certificate-box img:hover {
+    cursor: pointer;
+    height: 58vh;
+    width: 38vw;
 }
