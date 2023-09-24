@@ -6,7 +6,7 @@
 }
 
 html {
-    background-color: rgb(252, 204, 211);
+    background-color: rgb(40, 22, 56);
 }
 
 /* navbar section*/
@@ -104,8 +104,7 @@ html {
 .edu-container {
     height: 110vh;
     background-color: rgb(40, 22, 56);
-    border-top-left-radius: 500px;
-    border-bottom-left-radius: 500px;
+    /* border-bottom-left-radius: 500px; */
     padding: 40px 30px;
     display: flex;
 }
@@ -222,8 +221,8 @@ html {
 
 .work-container {
     height: 110vh;
-    background-color: rgb(40, 22, 56);
-    border-top-right-radius: 500px;
+    background-color: rgb(27, 15, 37);
+    border-top-left-radius: 400px;
     border-bottom-right-radius: 500px;
     display: flex;
     align-items: center;
@@ -306,7 +305,7 @@ html {
 
 }
 
-.work-box-top img:hover{
+.work-box-top img:hover {
     cursor: pointer;
     height: 78px;
     border-radius: 20px;
@@ -331,8 +330,8 @@ html {
 .skill-container {
     height: 110vh;
     background-color: rgb(40, 22, 56);
-    border-top-left-radius: 500px;
-    border-bottom-left-radius: 500px;
+    /* border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px; */
     padding: 40px 30px;
     display: flex;
     justify-content: center;
@@ -392,8 +391,8 @@ html {
 
 .certificate-container {
     height: 150vh;
-    background-color: rgb(40, 22, 56);
-    border-top-right-radius: 300px;
+    background-color: rgb(27, 15, 37);
+    border-top-left-radius: 400px;
     padding: 20px;
 }
 
@@ -433,7 +432,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 50px;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -453,4 +452,122 @@ html {
     cursor: pointer;
     height: 58vh;
     width: 38vw;
+}
+
+/* contactme container section */
+
+.contactme-container {
+    padding: 20px 0;
+    height: 102vh;
+    width: 100%;
+    background-color: white;
+    /* border-top-left-radius: 700px;
+    border-bottom-right-radius: 700px; */
+
+}
+
+.contactme-text {
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactme-text p {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.contactme-text span {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: rgb(140, 98, 176);
+    cursor: pointer;
+    transition: font-size 1s;
+}
+
+/* contactme container form section */
+
+form {
+    background-color: rgb(40, 22, 56);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 25vw;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+form p {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+
+}
+
+form span {
+    color: rgb(140, 98, 176);
+    font-size: 1.7rem;
+    transition: font-size 1s;
+    cursor: pointer;
+}
+
+form input,
+form textarea {
+    border: none;
+    margin: 10px;
+    padding: 20px;
+    outline: none;
+    background-color: rgb(45, 27, 61);
+    color: white;
+    font-size: 16px;
+}
+
+form button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 40%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(140, 98, 176);
+    border-radius: 20px;
+    margin: 5px auto;
+    transition: font-size 1s;
+}
+
+.contactme-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.contactme-container ul li {
+    padding-top: 10px;
+    list-style: none;
+    font-size: 3rem;
+    transition: font-size 1s;
+}
+
+
+/* contactme container animations */
+
+
+.contactme-text span:hover {
+    font-size: 3rem;
+}
+
+form span:hover {
+    font-size: 1.5rem;
+}
+
+form button:hover {
+    font-size: 1.3rem;
+}
+
+.contactme-container ul li:hover {
+    font-size: 2.8rem;
 }

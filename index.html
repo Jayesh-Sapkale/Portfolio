@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,6 @@
                 <div><a href="#work">Work Experience</a></div>
                 <div><a href="#skills">Skills</a></div>
                 <div><a href="#certificates">Certificates</a></div>
-                <div><a href="#project">Projects</a></div>
                 <div><a href="#contactme">Contact Me</a></div>
 
             </div>
@@ -189,6 +188,34 @@
                 </div>
             </div>
         </div>
+
+        <div class="contactme-container" id="contactme">
+
+            <div class="contactme-text">
+                <p>Let's <span>Connect</span></p>
+            </div>
+
+            <form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+                <p>Get in <span>Touch</span></p>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email Id" required>
+                <input type="tel" id="phone" placeholder="Phone No." required>
+                <textarea id="message" rows="4" placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/jayesh-sapkale"><i class="fa-brands fa-linkedin"
+                                style="color: #ffffff;"></i></a></li>
+                    <li><a href="https://github.com/Jayesh-Sapkale"><i class="fa-brands fa-github"
+                                style="color: #ffffff;"></i></a></li>
+                    <li><a href="/Documents/Jayesh Sapkale Resume DevOps.pdf" download><i class="fa-solid fa-file"
+                                style="color: #ffffff;"></i></a></li>
+                </ul>
+            </form>
+
+
+        </div>
+
     </main>
 
 
@@ -206,6 +233,22 @@
             function myFunction() {
                 var element = document.body;
                 element.classList.toggle("light-mode");
+            }
+        </script>
+
+        <script>
+            function sendEmail() {
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "jayeshsapkale792@gmail.com",
+                    Password: "C1EE4EAF302F9F8C1B46A00F1D419EA2C194",
+                    To: 'jayeshsapkale792@gmail.com',
+                    From: document.getElementById("email").value,
+                    Subject: "New Contact Form",
+                    Body: "And this is the body"
+                }).then(
+                    message => alert(message)
+                );
             }
         </script>
     </div>
