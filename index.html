@@ -195,12 +195,12 @@
                 <p>Let's <span>Connect</span></p>
             </div>
 
-            <form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+            <form class="contact-form" action="https://formspree.io/f/xnqkgwkg" data-netlify="true" method="post">
                 <p>Get in <span>Touch</span></p>
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Email Id" required>
-                <input type="tel" id="phone" placeholder="Phone No." required>
-                <textarea id="message" rows="4" placeholder="Message"></textarea>
+                <input name="name" type="text" id="name" placeholder="Your Name" required>
+                <input name="email" type="email" id="email" placeholder="Email Id" required>
+                <input name="phone" type="tel" id="phone" placeholder="Phone No." required>
+                <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
                 <button type="submit">Send</button>
 
                 <ul>
@@ -236,21 +236,6 @@
             }
         </script>
 
-        <script>
-            function sendEmail() {
-                Email.send({
-                    Host: "smtp.elasticemail.com",
-                    Username: "jayeshsapkale792@gmail.com",
-                    Password: "C1EE4EAF302F9F8C1B46A00F1D419EA2C194",
-                    To: 'jayeshsapkale792@gmail.com',
-                    From: document.getElementById("email").value,
-                    Subject: "New Contact Form",
-                    Body: "And this is the body"
-                }).then(
-                    message => alert(message)
-                );
-            }
-        </script>
     </div>
 </body>
 
