@@ -2,25 +2,34 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: rgb(40, 22, 56);
     scroll-behavior: smooth;
 }
 
-html {
-    background-color: rgb(40, 22, 56);
-}
 
 /* navbar section*/
 
 .navbar {
     margin-top: -32px;
-    padding: 0 50px;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(40, 22, 56);
+    background-color: rgb(23, 7, 35);
+    width: 100%;
+    gap: 40vw;
 
 }
+
+.sticky {
+    position: fixed;
+}
+
+
 
 .nav-items {
     display: flex;
@@ -37,27 +46,46 @@ html {
     transition: font-size 1s;
 }
 
+.navbar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: font-size 1s, transform 1s;
+}
+
+
+
 /* navbar animation */
 
 .navbar a:hover {
     font-size: 0.9rem;
 }
 
+.navbar button:hover,
+:active {
+    font-size: 0.9rem;
+    transform: rotate(180deg);
+}
+
 /* hero section */
 
 .home-container {
+    background-image: url("/img/home_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 70vh;
-    background-color: rgb(126, 72, 173);
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 70px 0;
     gap: 50px;
     border-bottom-right-radius: 500px;
-    color: white;
     color: black;
 }
+
 
 .container-text {
     height: 30vh;
@@ -68,6 +96,7 @@ html {
     justify-content: center;
     align-items: center;
     padding: 0 40px;
+    backdrop-filter: blur(5px);
 
 }
 
@@ -88,7 +117,7 @@ html {
 .container-text span {
     font-size: 3.2rem;
     font-weight: 700;
-    color: rgb(140, 98, 176);
+    color: white;
     transition: font-size 1s;
 }
 
@@ -104,10 +133,12 @@ html {
 .edu-container {
     height: 110vh;
     background-color: rgb(40, 22, 56);
-    /* border-bottom-left-radius: 500px; */
     padding: 40px 30px;
     display: flex;
 }
+
+
+
 
 /* education left section */
 
@@ -129,6 +160,7 @@ html {
     height: 90vh;
     width: 60vw;
     color: white;
+    backdrop-filter: blur(5px);
 }
 
 .edu-text {
@@ -149,6 +181,7 @@ html {
     transition: font-size 1s;
     color: rgb(140, 98, 176);
 }
+
 
 
 /* education right text animation */
@@ -205,6 +238,7 @@ html {
 
 }
 
+
 /* box-text animation */
 
 .edu-box img:hover {
@@ -227,7 +261,10 @@ html {
     display: flex;
     align-items: center;
     color: white;
+    padding: 80px 0;
 }
+
+
 
 /* work container left section */
 
@@ -338,6 +375,9 @@ html {
     align-items: center;
 }
 
+
+
+
 .skill-img img {
     height: 100vh;
 }
@@ -395,6 +435,8 @@ html {
     border-top-left-radius: 400px;
     padding: 20px;
 }
+
+
 
 /* certificate container top section */
 
@@ -457,7 +499,7 @@ html {
 /* contactme container section */
 
 .contactme-container {
-    padding: 20px 0;
+    padding: 0 0;
     height: 102vh;
     width: 100%;
     background-color: white;
@@ -466,11 +508,14 @@ html {
 
 }
 
+
 .contactme-text {
     width: 100%;
     height: 8vh;
     text-align: center;
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
+    padding: 50px 0 0 0;
+
 }
 
 .contactme-text p {
@@ -493,10 +538,11 @@ form {
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
-    width: 25vw;
+    width: 22vw;
     max-width: 600px;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 0px auto;
+    height: 70vh;
 }
 
 form p {
@@ -531,12 +577,16 @@ form button {
     outline: none;
     cursor: pointer;
     width: 40%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: rgb(140, 98, 176);
     border-radius: 20px;
     margin: 5px auto;
     transition: font-size 1s;
+    background-color: transparent;
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
 }
 
 .contactme-container ul {
@@ -550,6 +600,19 @@ form button {
     list-style: none;
     font-size: 2rem;
     transition: font-size 1s;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 20px;
+}
+
+
+
+form button p {
+    color: rgb(140, 98, 176);
 }
 
 
@@ -570,18 +633,4 @@ form button:hover {
 
 .contactme-container ul li:hover {
     font-size: 2.8rem;
-}
-
-.btn {
-    /* border: 2px solid black; */
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
-    margin: 20px;
-}
-
-form button {
-    background-color: transparent;
-    margin: 2px;
-    font-size: 2rem;
 }

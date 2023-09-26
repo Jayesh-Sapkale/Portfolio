@@ -14,12 +14,15 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+
 </head>
 
 <body>
 
     <header>
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <div class="nav-text">
                 <a href="#home">Jayesh's Portfolio</a>
             </div>
@@ -36,7 +39,7 @@
     </header>
 
     <main>
-        <div class="home-container light-mode">
+        <div class="home-container home-container-color" id="home">
             <div class="container-text">
                 <p>I am a passionate <span id="element"></span></p>
             </div>
@@ -46,7 +49,7 @@
             </div>
         </div>
 
-        <div class="edu-container" id="education">
+        <div class="edu-container edu-container-color" id="education">
             <div class="edu-left">
                 <img src="/img/edubg.png" alt="">
             </div>
@@ -103,7 +106,7 @@
             </div>
         </div>
 
-        <div class="work-container" id="work">
+        <div class="work-container work-container-color" id="work">
             <div class="work-left">
                 <div class="work-text">
                     <p>This is my <span>Work Experience</span></p>
@@ -143,7 +146,7 @@
 
         </div>
 
-        <div class="skill-container" id="skills">
+        <div class="skill-container skill-container-color" id="skills">
             <div class="skill-img">
                 <img src="/img/skillbg.png" alt="">
             </div>
@@ -165,7 +168,7 @@
 
         </div>
 
-        <div class="certificate-container" id="certificates">
+        <div class="certificate-container certificate-container-color" id="certificates">
 
             <div class="certificate-top">
                 <div class="certificate-text">
@@ -202,8 +205,7 @@
                 <input name="phone" type="tel" id="phone" placeholder="Phone No." required>
                 <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
                 <div class="btn">
-                    <button type="submit"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i></button>
-                    <button type="reset"><i class="fa-solid fa-rotate-left" style="color: #ffffff;"></i></button>
+                    <button type="submit"><p>Send</p><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i></button>
                 </div>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/jayesh-sapkale"><i class="fa-brands fa-linkedin"
@@ -212,8 +214,8 @@
                                 style="color: #ffffff;"></i></a></li>
                     <li><a href="mailto:jayeshsapkale792@gmail.com"><i class="fa-solid fa-envelope"
                                 style="color: #ffffff;"></i></a></li>
-                    <li><a href="/Documents/Jayesh Sapkale Resume DevOps.pdf" download><i class="fa-solid fa-file"
-                                style="color: #ffffff;"></i></a></li>
+                    <li><a id="resume_btn" href="/Documents/Jayesh Sapkale Resume DevOps.pdf" download><i
+                                class="fa-solid fa-file" style="color: #ffffff;"></i></a></li>
                 </ul>
             </form>
 
@@ -234,10 +236,31 @@
         </script>
 
         <script>
-            function myFunction() {
-                var element = document.body;
-                element.classList.toggle("light-mode");
+
+            window.onscroll = function () { stickyFunction() };
+
+            var navbar = document.getElementById("navbar");
+
+            var sticky = navbar.offsetTop;
+
+            function stickyFunction() {
+
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                }
+                else {
+                    navbar.classList.remove("sticky");
+                }
+
             }
+
+            window.onbeforeunload = () => {
+                for (const form of document.getElementsByTagName('form')) {
+                    form.reset();
+                }
+            }
+
+
         </script>
 
     </div>
