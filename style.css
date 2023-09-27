@@ -96,7 +96,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 40px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 
 }
 
@@ -160,7 +160,6 @@ body {
     height: 90vh;
     width: 60vw;
     color: white;
-    backdrop-filter: blur(5px);
 }
 
 .edu-text {
@@ -500,7 +499,7 @@ body {
 
 .contactme-container {
     padding: 0 0;
-    height: 102vh;
+    height: 110vh;
     width: 100%;
     background-color: white;
     /* border-top-left-radius: 700px;
@@ -542,7 +541,7 @@ form {
     max-width: 600px;
     border-radius: 10px;
     margin: 0px auto;
-    height: 70vh;
+    height: 80vh;
 }
 
 form p {
@@ -572,47 +571,63 @@ form textarea {
     font-size: 16px;
 }
 
-form button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    width: 40%;
-    font-size: 2rem;
-    font-weight: 600;
-    color: rgb(140, 98, 176);
-    border-radius: 20px;
-    margin: 5px auto;
-    transition: font-size 1s;
-    background-color: transparent;
-    display: flex;
-    gap: 5px;
-    justify-content: space-evenly;
-}
-
-.contactme-container ul {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
-}
-
-.contactme-container ul li {
-    padding-top: 10px;
-    list-style: none;
-    font-size: 2rem;
-    transition: font-size 1s;
-}
-
 .btn {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
-    margin: 20px;
+    margin: 20px auto;
 }
 
 
-
-form button p {
+form .btn button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 9vw;
+    font-size: 2rem;
+    font-weight: 600;
     color: rgb(140, 98, 176);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    transition: width 1s, font-size 1s;
+}
+
+form .btn button p {
+    color: rgb(140, 98, 176);
+    margin: 10px 0;
+}
+
+form .btn button i {
+    margin: 10px 0;
+    font-size: 2.2rem;
+}
+
+
+form ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+form ul li {
+    padding-top: 10px;
+    list-style: none;
+    font-size: 2rem;
+    width: 5vw;
+    transition: font-size 1s;
+
+}
+
+form ul li p {
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-align: center;
+    display: none;
+}
+
+form ul li i {
+    margin: 0 20px;
 }
 
 
@@ -631,6 +646,12 @@ form button:hover {
     font-size: 1.3rem;
 }
 
-.contactme-container ul li:hover {
+form ul li:hover {
     font-size: 2.8rem;
+}
+
+form ul li:hover p {
+    cursor: pointer;
+    display: block;
+
 }
